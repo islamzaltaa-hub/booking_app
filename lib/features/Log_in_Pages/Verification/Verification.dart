@@ -1,5 +1,5 @@
 import 'package:booking_app/core/utils/styles.dart';
-import 'package:booking_app/features/Log_in_Pages/widgets/main_login_bouttom.dart';
+import 'package:booking_app/core/widgets/main_login_bouttom.dart';
 import 'package:booking_app/features/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -51,7 +51,7 @@ class VerificationPage extends StatelessWidget {
 
             const SizedBox(height: 30),
 
-            loginboton(
+            mainbotuom(
               text: "Continue",
               onPressed: () {
                 Navigator.pushReplacement(

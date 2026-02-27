@@ -1,11 +1,11 @@
 import 'package:booking_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-class loginboton extends StatelessWidget {
+class mainbotuom extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
 
-  const loginboton({Key? key, required this.text, required this.onPressed})
+  const mainbotuom({Key? key, required this.text, required this.onPressed})
     : super(key: key);
 
   @override

@@ -4,7 +4,7 @@ import 'package:booking_app/features/Log_in_Pages/Verification/Verification.dart
 import 'package:booking_app/features/Log_in_Pages/sign_in/sign_in.dart';
 import 'package:booking_app/core/widgets/macktextbox.dart';
 import 'package:booking_app/features/Log_in_Pages/widgets/SocialButton.dart';
-import 'package:booking_app/features/Log_in_Pages/widgets/main_login_bouttom.dart';
+import 'package:booking_app/core/widgets/main_login_bouttom.dart';
 import 'package:flutter/material.dart';
 
 class sign_up extends StatelessWidget {
@@ -40,22 +40,22 @@ class sign_up extends StatelessWidget {
               ),
               const SizedBox(height: 30),
 
-              macktextbox(label: "Name", prefixIcon: Icons.person),
+              macktextbox(label: "Full name", prefixIcon: Icons.person),
               macktextbox(label: "Email adress", prefixIcon: Icons.email),
               macktextbox(
                 label: "Password",
                 prefixIcon: Icons.lock,
-                suffixIcon: Icons.hide_source,
+                suffixIcon: Icons.visibility_off,
               ),
               macktextbox(
                 label: "Confirm Password",
                 prefixIcon: Icons.lock,
-                suffixIcon: Icons.hide_source,
+                suffixIcon: Icons.visibility_off,
               ),
 
               const SizedBox(height: 25),
 
-              loginboton(
+              mainbotuom(
                 text: "SIGN UP",
                 onPressed: () {
                   Navigator.pushReplacement(

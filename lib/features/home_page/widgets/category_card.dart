@@ -1,5 +1,3 @@
-import 'package:booking_app/core/utils/colors.dart';
-import 'package:booking_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesCard extends StatelessWidget {
@@ -19,15 +17,24 @@ class CategoriesCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(20),
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(30),
+
+        border: Border.all(color: Colors.grey.withOpacity(0.1)),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(iconData, color: AppColors.primaryWhite),
-          const SizedBox(width: 6),
-          Text(txt, style: AppStyles.white16w400),
+          Icon(iconData, color: color, size: 20),
+          const SizedBox(width: 8),
+          Text(
+            txt,
+            style: const TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
         ],
       ),
     );

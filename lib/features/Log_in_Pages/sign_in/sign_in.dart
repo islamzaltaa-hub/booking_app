@@ -4,7 +4,7 @@ import 'package:booking_app/features/Log_in_Pages/resst_pass/resst_pass.dart';
 import 'package:booking_app/core/widgets/macktextbox.dart';
 import 'package:booking_app/features/Log_in_Pages/sign_up/sign_up.dart';
 import 'package:booking_app/features/Log_in_Pages/widgets/SocialButton.dart';
-import 'package:booking_app/features/Log_in_Pages/widgets/main_login_bouttom.dart';
+import 'package:booking_app/core/widgets/main_login_bouttom.dart';
 import 'package:booking_app/features/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -86,7 +86,7 @@ class _SignInState extends State<SignIn> {
 
               SizedBox(height: 20),
 
-              loginboton(
+              mainbotuom(
                 text: "SIGN IN",
                 onPressed: () {
                   Navigator.pushReplacement(
