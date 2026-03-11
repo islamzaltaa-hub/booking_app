@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:booking_app/core/utils/images.dart';
 import 'package:flutter/material.dart';
 
 Widget buildInviteCard() {
@@ -10,9 +11,8 @@ Widget buildInviteCard() {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         image: const DecorationImage(
-          image: AssetImage(
-            "assets/images/WhatsApp Image 2026-02-27 at 8.59.42 AM.jpeg",
-          ),
+          image: AssetImage(Images.offer),
+
           fit: BoxFit.cover,
         ),
       ),
