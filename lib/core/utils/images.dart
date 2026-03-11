@@ -10,7 +10,7 @@ class Images {
       'assets/images/Group 33331 (2).png';
   static const String google = 'assets/images/products-googlesearch.png';
   static const String facebook = 'assets/images/fb_icon-icons.com_66689.png';
-  static const String profile1 = 'assets/images/Rectangle 4158.png';
+  static const String profile1 = 'assets/icons/Rectangle 4158.png';
   static const String profile2 = 'assets/images/image 89.png';
   static const String Horizonta1 = 'assets/carts/Group 33318.png';
   static const String Horizonta2 = 'assets/images/Group 33318 (1).png';
@@ -36,4 +36,13 @@ class Images {
   static const String food = "assets/icons/Group 18321.png";
   static const String personprofile = "assets/icons/Mask Group (1).png";
   static const String icono = "assets/icons/Ellipse 52.png";
+  static const String user1 = "assets/icons/Ellipse 60 (1).png";
+  static const String user2 = "assets/icons/Ellipse 60.png";
+  static const String user3 = "assets/icons/Ellipse 61.png";
+  static const String user4 = "assets/icons/Ellipse 62.png";
+  static const String user5 = "assets/icons/Ellipse 63.png";
+  static const String user6 = "assets/icons/Ellipse 64.png";
+  static const String user7 = "assets/icons/Ellipse 65.png";
+  static const String user8 = "assets/icons/Ellipse 66.png";
+  static const String user9 = "assets/icons/Ellipse 67.png";
 }

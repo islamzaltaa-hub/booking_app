@@ -1,7 +1,8 @@
 import 'package:booking_app/core/utils/colors.dart';
+import 'package:booking_app/features/natifcations/nafications.dart';
 import 'package:flutter/material.dart';
 
-PreferredSizeWidget buildHomeAppBar() {
+PreferredSizeWidget buildHomeAppBar(BuildContext context) {
   return AppBar(
     backgroundColor: AppColors.primaryColor,
     elevation: 0,
@@ -18,7 +19,6 @@ PreferredSizeWidget buildHomeAppBar() {
             Icon(Icons.keyboard_arrow_down, color: Colors.white),
           ],
         ),
-
         Row(
           children: [
             Text(
@@ -32,8 +32,13 @@ PreferredSizeWidget buildHomeAppBar() {
     ),
     actions: [
       IconButton(
-        onPressed: () {},
         icon: const Icon(Icons.notifications_outlined),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => Nafications()),
+          );
+        },
       ),
     ],
   );
