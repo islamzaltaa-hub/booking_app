@@ -1,3 +1,5 @@
+// ignore_for_file: curly_braces_in_flow_control_structures, camel_case_types
+
 import 'package:booking_app/core/utils/images.dart';
 import 'package:booking_app/core/utils/styles.dart';
 import 'package:booking_app/features/Log_in_Pages/Verification/Verification.dart';
@@ -15,6 +17,8 @@ class sign_up extends StatefulWidget {
   State<sign_up> createState() => _sign_upState();
 }
 
+// ignore: duplicate_ignore
+// ignore: camel_case_types
 class _sign_upState extends State<sign_up> {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController nameController = TextEditingController();

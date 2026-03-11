@@ -17,7 +17,7 @@ ListView reviewp() {
         name: "Angelina  ",
         rating: 5,
         comment: "Best experience ever! Highly recommended.",
-        image: Images.icono,
+        image: Images.images3,
       ),
       buildReviewCard(
         name: "Angelina Jolie",

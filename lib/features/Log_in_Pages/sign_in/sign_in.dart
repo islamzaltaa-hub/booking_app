@@ -1,3 +1,5 @@
+// ignore_for_file: curly_braces_in_flow_control_structures
+
 import 'package:booking_app/core/utils/images.dart';
 import 'package:booking_app/core/utils/styles.dart';
 import 'package:booking_app/features/Log_in_Pages/resst_pass/resst_pass.dart';
@@ -50,6 +52,8 @@ class _SignInState extends State<SignIn> {
                   keyboardType: TextInputType.emailAddress,
                   validator: (value) {
                     if (value == null || value.isEmpty)
+                      // ignore: duplicate_ignore
+                      // ignore: curly_braces_in_flow_control_structures
                       return "Email is required";
                     if (!value.contains('@')) return "Enter a valid email";
                     return null;

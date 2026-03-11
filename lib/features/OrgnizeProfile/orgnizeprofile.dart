@@ -8,6 +8,7 @@ import 'package:booking_app/features/ProfilePage/widget/ProfileHeder.dart';
 import 'package:booking_app/features/ProfilePage/widget/appbrofilebar.dart';
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class orgnizeprofile extends StatelessWidget {
   const orgnizeprofile({super.key});
   static const routeName = 'profile';
