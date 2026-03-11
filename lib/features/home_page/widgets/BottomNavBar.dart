@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:booking_app/features/MapPage/MapPage.dart';
 import 'package:booking_app/features/ProfilePage/ProfilePage.dart';
 import 'package:booking_app/features/EventsPage/EventsPage.dart';

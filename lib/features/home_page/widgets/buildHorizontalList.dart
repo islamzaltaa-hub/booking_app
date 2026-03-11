@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:booking_app/core/utils/images.dart';
 import 'package:booking_app/features/home_page/widgets/even_card.dart';
 import 'package:flutter/material.dart';

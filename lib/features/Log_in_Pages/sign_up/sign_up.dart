@@ -7,113 +7,144 @@ import 'package:booking_app/features/Log_in_Pages/widgets/SocialButton.dart';
 import 'package:booking_app/core/widgets/main_login_bouttom.dart';
 import 'package:flutter/material.dart';
 
-class sign_up extends StatelessWidget {
+class sign_up extends StatefulWidget {
+  const sign_up({super.key});
   static const routeName = 'creat_acount';
+
+  @override
+  State<sign_up> createState() => _sign_upState();
+}
+
+class _sign_upState extends State<sign_up> {
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+          onPressed: () => Navigator.pop(context),
         ),
       ),
-
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
-            children: [
-              const SizedBox(height: 10),
-              Row(
-                children: const [
-                  Text(
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: [
+                const SizedBox(height: 10),
+                const Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
                     "Sign up",
                     style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
                   ),
-                ],
-              ),
-              const SizedBox(height: 30),
+                ),
+                const SizedBox(height: 30),
 
-              macktextbox(label: "Full name", prefixIcon: Icons.person),
-              macktextbox(label: "Email adress", prefixIcon: Icons.email),
-              macktextbox(
-                label: "Password",
-                prefixIcon: Icons.lock,
-                suffixIcon: Icons.visibility_off,
-              ),
-              macktextbox(
-                label: "Confirm Password",
-                prefixIcon: Icons.lock,
-                suffixIcon: Icons.visibility_off,
-              ),
+                MackTextBox(
+                  controller: nameController,
+                  label: "Full name",
+                  prefixIcon: Icons.person,
+                  validator: (val) => val!.isEmpty ? "Enter your name" : null,
+                ),
 
-              const SizedBox(height: 25),
+                MackTextBox(
+                  controller: emailController,
+                  label: "Email address",
+                  prefixIcon: Icons.email,
+                  keyboardType: TextInputType.emailAddress,
+                  validator: (val) => (val == null || !val.contains('@'))
+                      ? "Enter a valid email"
+                      : null,
+                ),
 
-              mainbotuom(
-                text: "SIGN UP",
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (_) => VerificationPage()),
-                  );
-                },
-              ),
+                MackTextBox(
+                  controller: passwordController,
+                  label: "Password",
+                  prefixIcon: Icons.lock,
+                  isPassword: true,
+                  validator: (val) =>
+                      val!.length < 6 ? "Min 6 characters" : null,
+                ),
 
-              const SizedBox(height: 10),
+                MackTextBox(
+                  controller: confirmPasswordController,
+                  label: "Confirm Password",
+                  prefixIcon: Icons.lock,
+                  isPassword: true,
+                  validator: (val) {
+                    if (val != passwordController.text)
+                      return "Passwords don't match";
+                    return null;
+                  },
+                ),
 
-              const SizedBox(height: 20),
-              Center(
-                child: Text(
-                  "OR",
-                  style: TextStyle(
-                    color: Colors.black54,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
+                const SizedBox(height: 25),
+
+                mainbotuom(
+                  text: "SIGN UP",
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (_) => VerificationPage()),
+                      );
+                    }
+                  },
+                ),
+
+                const SizedBox(height: 20),
+                const Center(
+                  child: Text(
+                    "OR",
+                    style: TextStyle(color: Colors.black54, fontSize: 16),
                   ),
                 ),
-              ),
+                const SizedBox(height: 20),
 
-              SizedBox(height: 20),
-              Column(
-                children: [
-                  SocialButton(
-                    assetPath: Images.facebook,
-                    label: "Continue with Facebook",
-                  ),
-                  SizedBox(height: 25),
-                  SocialButton(
-                    assetPath: Images.google,
-                    label: "Continue with Google",
-                  ),
-                ],
-              ),
-              SizedBox(height: 25),
+                SocialButton(
+                  assetPath: Images.facebook,
+                  label: "Continue with Facebook",
+                ),
+                const SizedBox(height: 25),
+                SocialButton(
+                  assetPath: Images.google,
+                  label: "Continue with Google",
+                ),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Already have an account?"),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => SignIn()),
-                      );
-                    },
-                    child: Text(
-                      "Signin  ",
-                      style: AppStyles.primaryColor15w300,
+                const SizedBox(height: 25),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text("Already have an account? "),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const SignIn()),
+                        );
+                      },
+                      child: Text(
+                        "Sign in",
+                        style: AppStyles.primaryColor15w300,
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+                const SizedBox(height: 30),
+              ],
+            ),
           ),
         ),
       ),

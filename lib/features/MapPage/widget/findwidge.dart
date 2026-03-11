@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:booking_app/core/utils/colors.dart';
 import 'package:booking_app/features/MapPage/wightbar/wightbar.dart';
 import 'package:flutter/material.dart';

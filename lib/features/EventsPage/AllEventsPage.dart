@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:booking_app/core/widgets/cardsbilder.dart';
 import 'package:flutter/material.dart';
 import 'package:booking_app/core/utils/images.dart';

@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:booking_app/features/home_page/widgets/evendetaails.dart';
 import 'package:flutter/material.dart';
 

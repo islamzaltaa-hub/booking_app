@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "763000493083",
+    "project_id": "myfristpro1",
+    "storage_bucket": "myfristpro1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763000493083:android:6469ddf1a9a8013c0994be",
+        "android_client_info": {
+          "package_name": "com.example.booking_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCttzHAtCrQqoLY2UO9Y0KDw0hABV-LDw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

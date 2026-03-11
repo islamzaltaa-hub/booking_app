@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, prefer_const_constructors_in_immutables
+
 import 'dart:async';
 
 import 'package:booking_app/core/utils/images.dart';

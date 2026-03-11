@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, use_key_in_widget_constructors
+
 import 'package:booking_app/core/utils/styles.dart';
 import 'package:booking_app/core/widgets/main_login_bouttom.dart';
 import 'package:booking_app/features/home_page/home_page.dart';

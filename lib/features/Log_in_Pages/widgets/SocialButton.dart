@@ -1,3 +1,5 @@
+// ignore_for_file: use_super_parameters, file_names
+
 import 'package:flutter/material.dart';
 
 class SocialButton extends StatelessWidget {

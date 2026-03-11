@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_ignore, deprecated_member_use, avoid_print
+
 import 'package:booking_app/core/utils/images.dart';
 import 'package:booking_app/core/widgets/main_login_bouttom.dart';
 import 'package:flutter/material.dart';
@@ -85,7 +87,6 @@ class EventDetailsPage extends StatelessWidget {
     );
   }
 
-  // Helper method لإضافة الصفوف (التاريخ والمكان) لتقليل تكرار الكود
   Widget _buildInfoRow(IconData icon, String title, String subtitle) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12),
@@ -94,6 +95,7 @@ class EventDetailsPage extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
+              // ignore: deprecated_member_use
               color: const Color(0xFF5669FF).withOpacity(0.1),
               borderRadius: BorderRadius.circular(12),
             ),

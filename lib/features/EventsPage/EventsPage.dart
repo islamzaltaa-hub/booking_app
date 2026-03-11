@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:booking_app/core/widgets/main_login_bouttom.dart';
 import 'package:booking_app/features/EventsPage/AllEventsPage.dart';
 import 'package:flutter/material.dart';
@@ -57,6 +59,7 @@ class _EventsPageState extends State<EventsPage>
                 borderRadius: BorderRadius.circular(25),
                 boxShadow: [
                   BoxShadow(
+                    // ignore: deprecated_member_use
                     color: Colors.black.withOpacity(0.05),
                     blurRadius: 5,
                     offset: const Offset(0, 2),
